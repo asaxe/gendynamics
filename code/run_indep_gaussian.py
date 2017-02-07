@@ -9,6 +9,8 @@ from keras.layers.core import Dense, Dropout, Activation
 from keras.optimizers import SGD
 from keras.utils import np_utils
 
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 P = 550
@@ -61,5 +63,7 @@ line1, = ax.plot(epoch, history.history['loss'], '--', linewidth=2,
 line2, = ax.plot(epoch, history.history['val_loss'], '--', linewidth=2,
                  label='Test loss')
 ax.legend(loc='upper right')
-plt.show()
+
+fig.savefig('training_dynamics.pdf', bbox_inches='tight')
+
 
