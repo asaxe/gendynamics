@@ -1,0 +1,10 @@
+-rseed 0 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 0 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res1.npz
+-rseed 1 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 0 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res2.npz
+-rseed 2 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 0 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res3.npz
+-rseed 3 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 0 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res4.npz
+-rseed 4 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 0 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res5.npz
+-rseed 0 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 1 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res6.npz
+-rseed 1 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 1 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res7.npz
+-rseed 2 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 1 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res8.npz
+-rseed 3 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 1 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res9.npz
+-rseed 4 -weightscale 0.1 -snr 0.1 -lr .01 -numsamples 392 -numinputs 784 -numoutputs 10 -depth 1 -epochs 5 -savefile /n/home13/asaxe/gendynamics/results/expt1/res10.npz

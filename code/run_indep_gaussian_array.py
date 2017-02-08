@@ -12,6 +12,14 @@ from keras import initializations
 
 import argparse
 
+# Array cluster job wrapper
+cmdparser = argparse.ArgumentParser()
+cmdparser.add_argument('-paramfile', type=argparse.FileType('r'))
+cmdparser.add_argument('-line', type=int)
+
+cmd = cmdparser.parse_args();
+
+# Standard command line arguments
 
 parser = argparse.ArgumentParser()
 
@@ -37,8 +45,10 @@ parser.add_argument('-showplot', action='store_true')
 parser.add_argument('-saveplot', action='store_true')
 parser.add_argument('-verbose', action='store_true')
 
-
-settings = parser.parse_args(); 
+# Read in parameters from correct line of file
+for l, line in enumerate(cmd.paramfile):
+    if l == cmd.line:
+        settings = parser.parse_args(line.split()); 
 
 import matplotlib
 

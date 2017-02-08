@@ -1,0 +1,2 @@
+echo testing > myfile.txt
+echo testing2 > myfile.txt
