@@ -3,7 +3,7 @@ from subprocess import call
 
 fo = open("params.txt", "w")
 
-expt = 1
+expt = 2
 
 Ni = 1000
 No = 10
