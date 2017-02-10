@@ -35,7 +35,7 @@ if settings.mail:
     fo.write('#SBATCH --mail-type=FAIL\n')
     fo.write('#SBATCH --mail-user=asaxe@fas.harvard.edu\n')
 fo.write("\ncd %s\n" %  os.getcwd())
-fo.write("module load keras\n")
+fo.write("module load gcc/4.9.3-fasrc01 tensorflow/0.12.0-fasrc02\n")
 fo.write("python run_indep_gaussian_array.py -paramfile %s -line ${SLURM_ARRAY_TASK_ID}\n" % settings.paramfile.name)
 
 fo.close()

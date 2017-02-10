@@ -75,7 +75,7 @@ scaled_normal_init = lambda shape, name=None: initializations.normal(shape, scal
 
 
 P = settings.numsamples
-P_t = 10000
+P_t = 1
 Ni = settings.numinputs
 Nh = settings.numhid
 No = settings.numoutputs
