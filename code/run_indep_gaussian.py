@@ -66,7 +66,7 @@ class GaussianGeneralizationHistory(Callback):
         
         # Compute loss
         dW = self.W0 - W
-        gen_err = (1./self.No)*np.trace(np.dot(dW,dW.T)) + self.sigma_o**2
+        gen_err = (1./self.No)*np.linalg.norm(dW)**2 + self.sigma_o**2
         
         self.genhist.append(gen_err)
         
@@ -75,7 +75,7 @@ scaled_normal_init = lambda shape, name=None: initializations.normal(shape, scal
 
 
 P = settings.numsamples
-P_t = 10
+P_t = 10000
 Ni = settings.numinputs
 Nh = settings.numhid
 No = settings.numoutputs
@@ -101,16 +101,16 @@ Y_test = np.dot(X_test,W0) + np.random.normal(0,sigma_o,(P_t, No))
 
 model = Sequential()
 if settings.depth > 0: # Deep model
-    model.add(Dense(Nh, input_shape=(Ni,), init=scaled_normal_init))
+    model.add(Dense(Nh, input_shape=(Ni,), bias=False, init=scaled_normal_init))
     
     for d in range(settings.depth-1):
-        model.add(Dense(Nh, init=scaled_normal_init))
+        model.add(Dense(Nh, bias=False, init=scaled_normal_init))
         #model.add(Activation('relu'))
         #model.add(Dropout(0.2))
         
-    model.add(Dense(No, init=scaled_normal_init))
+    model.add(Dense(No, bias=False, init=scaled_normal_init))
 else: # Shallow model
-    model.add(Dense(No, input_shape=(Ni,), init=scaled_normal_init))
+    model.add(Dense(No, input_shape=(Ni,), bias=False, init=scaled_normal_init))
 
 if settings.verbose:
     model.summary()
